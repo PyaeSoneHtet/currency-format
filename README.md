@@ -21,6 +21,7 @@ yarn install rn-format-currency
 ## Usage
 
 ```js
+
 import * as React from 'react';
 import {StyleSheet, View, Text, TextInput} from 'react-native';
 import {
@@ -36,7 +37,9 @@ export default function App() {
     <View style={styles.container}>
       <View style={styles.row}>
         <Text style={styles.label}>Balance</Text>
-        <Text style={styles.value}>{formatCurrency('23000.3432')}</Text>
+        <Text style={styles.value}>
+          {formatCurrency({amount: '23000.3432', prefix: '$', code: 'USD'})}
+        </Text>
       </View>
 
       <View style={styles.row}>
@@ -45,10 +48,13 @@ export default function App() {
           {formatAccountNumber(3443435324535543)}
         </Text>
       </View>
-
       <TextInput
         value={value}
-        onChangeText={_value => setValue(formatCurrencyInput(_value, 3))} //Format currency in TextInput
+        onChangeText={_value =>
+          setValue(
+            formatCurrencyInput({value: _value, decimal: 5, maxLength: 22}),
+          )
+        } //Format currency in TextInput
         style={styles.input}
       />
     </View>
@@ -85,19 +91,19 @@ const styles = StyleSheet.create({
 
 ```
 ## Props
-formatCurrency function can access string only.
+
+### formatCurrency props
 ```js
-const fcurrency = formatCurrency('23000.3432')
+const fcurrency = formatCurrency({amount: '23000.3432', prefix: '$', code: 'USD'})
 ```
 
-formatAccountNumber function can access number only.
+### formatAccountNumber props
 ```js
 const fAccountNumber = formatAccountNumber(3443435324535543)
 ```
-formatCurrencyInput function can access two props. The first one is string and the secound is number (decimal number).
-This function can use in RN TextInput
+### formatCurrencyInput props
 ```js
-const fcurrency = formatCurrencyInput("232323", 3)
+const fcurrency = formatCurrencyInput({value: _value, decimal: 5, maxLength: 22})
 ```
 
 ## Contributing
