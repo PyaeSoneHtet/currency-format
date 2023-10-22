@@ -12,7 +12,7 @@ npm install react-native-currency_format
 
 ```js
 import * as React from 'react';
-import { StyleSheet, View, Text, TextInput } from 'react-native';
+import {StyleSheet, View, Text, TextInput} from 'react-native';
 import {
   formatCurrencyInput,
   formatCurrency,
@@ -20,15 +20,25 @@ import {
 } from 'react-native-currency-format';
 
 export default function App() {
-  const [value, setValue] = React.useState < string > '';
+  const [value, setValue] = React.useState('');
 
   return (
     <View style={styles.container}>
-      <Text>{formatCurrency('0.2333')}</Text> // Format currency
-      <Text>{formatAccountNumber(3443435324535543)}</Text> // Format Account Number
+      <View style={styles.row}>
+        <Text style={styles.label}>Balance</Text>
+        <Text style={styles.value}>{formatCurrency('23000.3432')}</Text>
+      </View>
+
+      <View style={styles.row}>
+        <Text style={styles.label}>Account Number</Text>
+        <Text style={styles.value}>
+          {formatAccountNumber(3443435324535543)}
+        </Text>
+      </View>
+
       <TextInput
         value={value}
-        onChangeText={(_value) => setValue(formatCurrencyInput(_value, 3))} //Format currency in TextInput
+        onChangeText={_value => setValue(formatCurrencyInput(_value, 3))} //Format currency in TextInput
         style={styles.input}
       />
     </View>
@@ -38,13 +48,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
     justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
   },
   input: {
     borderColor: 'gray',
@@ -54,7 +58,21 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     padding: 10,
   },
+  row: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  label: {
+    fontSize: 18,
+    marginRight: 10,
+  },
+  value: {
+    fontSize: 18,
+  },
 });
+
 ```
 
 ## Contributing
