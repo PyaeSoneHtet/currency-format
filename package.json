@@ -1,7 +1,7 @@
 {
-  "name": "react-native-currency_formater",
+  "name": "react-native-currency-format",
   "version": "0.1.0",
-  "description": "Currecy format and spacing",
+  "description": "Format currency and account number in React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
@@ -39,13 +39,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/PyaeSoneHtet?tab=repositories/react-native-currency_formater",
+  "repository": "https://github.com/PyaeSoneHtet?tab=repositories/react-native-currency-format",
   "author": "Pyae Sone Htet <pyaesonehtet432@gmail.com> (https://github.com/PyaeSoneHtet?tab=repositories)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/PyaeSoneHtet?tab=repositories/react-native-currency_formater/issues"
+    "url": "https://github.com/PyaeSoneHtet?tab=repositories/react-native-currency-format/issues"
   },
-  "homepage": "https://github.com/PyaeSoneHtet?tab=repositories/react-native-currency_formater#readme",
+  "homepage": "https://github.com/PyaeSoneHtet?tab=repositories/react-native-currency-format#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
