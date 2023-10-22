@@ -1,6 +1,6 @@
-# react-native-currency_formater
+# react-native-currency-format
 
-Currecy format and spacing
+Format currency and account number in React Native
 
 ## Installation
 
