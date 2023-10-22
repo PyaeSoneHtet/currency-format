@@ -1,6 +1,7 @@
 # rn-format-currency
 
 Format currency and account number in React Native
+
 ![Screen Recording 2023-10-22 at 2 46 57 PM](https://github.com/PyaeSoneHtet/currency-format/assets/40881760/3944f71d-09d1-452e-add9-c73204e899bc)
 
 ## Installation
