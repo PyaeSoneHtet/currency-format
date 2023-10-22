@@ -4,11 +4,18 @@ Format currency and account number in React Native
 
 ![Screen Recording 2023-10-22 at 2 56 59 PM](https://github.com/PyaeSoneHtet/currency-format/assets/40881760/665be875-d937-4eb2-9f8b-35b3642933df)
 
+## npm
+https://www.npmjs.com/package/rn-format-currency?activeTab=readme
 
 ## Installation
 
+### Via npm
 ```sh
 npm install rn-format-currency
+```
+### Via yarn
+```sh
+yarn install rn-format-currency
 ```
 
 ## Usage
@@ -76,6 +83,21 @@ const styles = StyleSheet.create({
   },
 });
 
+```
+## Props
+formatCurrency function can access string only.
+```js
+const fcurrency = formatCurrency('23000.3432')
+```
+
+formatAccountNumber function can access number only.
+```js
+const fAccountNumber = formatAccountNumber(3443435324535543)
+```
+formatCurrencyInput function can access two props. The first one is string and the secound is number (decimal number).
+This function can use in RN TextInput
+```js
+const fcurrency = formatCurrencyInput("232323", 3)
 ```
 
 ## Contributing
