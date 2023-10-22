@@ -1,11 +1,11 @@
-# react-native-currency-format
+# react-native-format-currency
 
 Format currency and account number in React Native
 
 ## Installation
 
 ```sh
-npm install react-native-currency_format
+npm install react-native-format-currency
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ import {
   formatCurrencyInput,
   formatCurrency,
   formatAccountNumber,
-} from 'react-native-currency-format';
+} from 'react-native-format-currency';
 
 export default function App() {
   const [value, setValue] = React.useState('');
