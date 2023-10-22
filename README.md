@@ -17,7 +17,7 @@ import {
   formatCurrencyInput,
   formatCurrency,
   formatAccountNumber,
-} from 'react-native-currency_formater';
+} from 'react-native-currency-format';
 
 export default function App() {
   const [value, setValue] = React.useState < string > '';
