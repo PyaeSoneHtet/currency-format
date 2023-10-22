@@ -96,6 +96,11 @@ const styles = StyleSheet.create({
 ```js
 const fcurrency = formatCurrency({amount: '23000.3432', prefix: '$', code: 'USD'})
 ```
+| Props | Type  | Default  |  Description |
+| ------- | --- | --- | ----------- |
+| amount | string | none |  '10000.00' |
+| perfix | string | none | '$', '€' or '' |
+| code | string | none | 'USD', 'EURO' or '' |
 
 ### formatAccountNumber props
 ```js
@@ -105,6 +110,11 @@ const fAccountNumber = formatAccountNumber(3443435324535543)
 ```js
 const fcurrency = formatCurrencyInput({value: _value, decimal: 5, maxLength: 22})
 ```
+| Props | Type  | Default  |  Description |
+| ------- | --- | --- | ----------- |
+| value | string | none |  '10000.00' |
+| decimal | number | none | 0, 1, 2, 3 |
+| maxLength | number | none | 0, 1, 2,....,20 |
 
 ## Contributing
 
